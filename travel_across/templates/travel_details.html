@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/application.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/application.css')}}" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -34,7 +34,7 @@
     <div class="container" id="travel_detais">
         <section class="home_css">
         <h1>Travel Details</h1>
-            <form action="/travelDetails/save_tdetails" id="travelDetailsForm" role="form" method="POST">
+            <form action="/travelDetails/save" id="travelDetailsForm" role="form" method="POST" enctype=multipart/form-data >
                 <p id="errorMessage" style="color:white"></p>
                 <table>
                  <tr>
@@ -78,6 +78,31 @@
     <div class="container" id="user_details">
         <section class="home_css">
         <h1>User Details</h1>
+            <form action="/travelDetails/save-user" method="POST">
+                <table>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" id="first_name" name="first_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" id="last_name" name="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="password" name="password" required></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" id="cpassword" name="cpassword" required></td>
+                    </tr>
+                </table>
+                <input type="submit" class="btn btn-primary" value="Submit" id="btnUserSubmit">
+            </form>
     </section>
     </div>
 
@@ -87,9 +112,6 @@
         </section>
     </div>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
     <!--<script type="text/javascript" src="{{ url_for('static', filename='scripts/travelDetails.js') }}"></script>-->
 
     <footer id="footer">
@@ -99,5 +121,9 @@
 			</div>
 		</div>
 	</footer>
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/application.js') }}"></script>
 </body>
 </html>

@@ -16,12 +16,12 @@ class TravelDetails:
         def saveTravelInfo(self, travelDetails):
             self.db.users.insert(travelDetails)
 
-            def getAllTravelDetails(self):
-                allItems = self.db.products.find()
-                if allItems.count() > 0:
-                    matches = []
-                    for item in allItems:
-                        matches.append(item)
-                    return matches
-                else:
-                    return ""
+        def getAllTravelDetails(self):
+            allItems = self.db.products.find()
+            if allItems.count() > 0:
+                matches = []
+                for item in allItems:
+                    matches.append(item)
+                return matches
+            else:
+                return ""

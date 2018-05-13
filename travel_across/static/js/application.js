@@ -31,4 +31,13 @@ $(document).ready(function(){
         $('#user_details').hide();
         $('#home_div').hide();
     });
+
+    $("#btnUserSubmit").click(function () {
+        var password = $("#password").val();
+        var confirmPassword = $("#cpassword").val();
+        if (password != confirmPassword) {
+             return false;
+        }
+        return true;
+    });
 });
