@@ -6,13 +6,15 @@ $(document).ready(function(){
             if (parseInt($fileUpload.get(0).files.length)>5){
              alert("You can only upload a maximum of 5 files");
             }
-        var form = $('travelDetailsForm')[0]; // You need to use standard javascript object here
+        var form = $('#travelDetailsForm')[0]; // You need to use standard javascript object here
         var formData = new FormData(form);
 
              $.ajax({
                 url: '/travelDetails/save',
                 data: formData,
                 type: 'POST',
+                processData: false,
+                enctype: 'multipart/form-data',
                 success: function(response){
                     $('#travelDetailsForm').trigger("reset");
                     document.write(response);
