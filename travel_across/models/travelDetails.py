@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 from flask import session
 import re
-import jwt
 from bson.objectid import ObjectId
 import json
 
