@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $('#home_div').show();
-        $('#travel_detais').hide();
-        $('#user_details').hide();
-        $('#about_us').hide();
+    $('#travel_detais').hide();
+    $('#user_details').hide();
+    $('#about_us').hide();
 
     $('#home').click(function(){
         $('#home_div').show();
