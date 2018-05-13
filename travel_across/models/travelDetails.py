@@ -14,10 +14,10 @@ class TravelDetails:
             self.db = client[config["mongod_dbName"]]
 
         def saveTravelInfo(self, travelDetails):
-            self.db.users.insert(travelDetails)
+            self.db.travelDetails.insert(travelDetails)
 
-            def getAllTravelDetails(self):
-                allItems = self.db.products.find()
+        def getAllTravelDetails(self):
+                allItems = self.db.travelDetails.find()
                 if allItems.count() > 0:
                     matches = []
                     for item in allItems:
