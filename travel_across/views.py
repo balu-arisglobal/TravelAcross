@@ -7,7 +7,7 @@ from travel_across.models.travelDetails import TravelDetails
 td= TravelDetails()
 
 
-
 @app.route('/')
 def home():
-   return render_template('travel_details.html', results = td.getAllTravelDetails())
+   allDetails = td.getAllTravelDetails()
+   return render_template('travel_details.html', results=allDetails)

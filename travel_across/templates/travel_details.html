@@ -24,6 +24,10 @@
     <div class="container" id="home_div">
         <section class="home_css">
             <h1>Home</h1>
+            {% for res in results %}                    Title  :: {{ res.catchy_title}} <br>
+                   sub Title :: {{ res.sub_title}} <br>
+               <input type="button" id="readMoreBtn" value="Read More"> <br>
+           {% endfor %}
         </section>
     </div>
 
@@ -65,7 +69,7 @@
 
                 </table>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="saveTravelDetailsBtn">Save Details </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="saveTravelDetailsBtn">Save Details </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             </form>
     </section>
@@ -86,7 +90,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='scripts/travelDetails.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='scripts/travelDetails.js') }}"></script>-->
 
     <footer id="footer">
 		<div class="container">

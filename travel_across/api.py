@@ -41,8 +41,8 @@ def save_travel_details():
         sub_title = request.form.get('sub_title',None)
         start_date = request.form.get('start_date', None)
         end_date = request.form.get('end_date', None)
-        file = request.files['image1']
-        print(type(file))
+        file = request.files['file']
+        print(file)
 
         if place and catchy_title and sub_title and start_date and end_date and file:
             if file.filename == '':
@@ -53,5 +53,5 @@ def save_travel_details():
                 print(url_for('uploaded_file', filename=filename))
                 return redirect(url_for('uploaded_file', filename=filename))
             t_details_object = {'place':place,'catchy_title':catchy_title,'sub_title':sub_title,'start_date':start_date,'end_date':end_date,'file':file}
-            td.saveTravelInfo(t_details_object)
+            #td.saveTravelInfo(t_details_object)
             render_template('travel_details.html')

@@ -13,17 +13,15 @@ class TravelDetails:
             client = MongoClient(config["mongod_host"], config["mongod_port"])
             self.db = client[config["mongod_dbName"]]
 
-
         def saveTravelInfo(self, travelDetails):
             self.db.users.insert(travelDetails)
 
-
-        def getAllTravelDetails(self):
-            allItems = self.db.products.find()
-            if allItems.count() > 0:
-                matches = []
-                for item in allItems:
-                    matches.append(item)
-                return matches
-            else:
-                return "Empty List! No data found."
+            def getAllTravelDetails(self):
+                allItems = self.db.products.find()
+                if allItems.count() > 0:
+                    matches = []
+                    for item in allItems:
+                        matches.append(item)
+                    return matches
+                else:
+                    return ""
