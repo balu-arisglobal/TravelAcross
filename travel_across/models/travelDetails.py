@@ -13,3 +13,6 @@ class TravelDetails:
             client = MongoClient(config["mongod_host"], config["mongod_port"])
             self.db = client[config["mongod_dbName"]]
 
+
+        def saveTravelInfo(self):
+            print()
