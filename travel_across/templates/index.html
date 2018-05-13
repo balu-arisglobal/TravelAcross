@@ -6,13 +6,13 @@
 	<meta name="description" content="Creative One Page Parallax Template">
 	<meta name="keywords" content="Creative, Onepage, Parallax, HTML5, Bootstrap, Popular, custom, personal, portfolio" /> 
 	<meta name="author" content=""> 
-	<title>HIMU - OnePage HTML Parallax template</title> 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/prettyPhoto.css" rel="stylesheet"> 
-	<link href="css/font-awesome.min.css" rel="stylesheet"> 
-	<link href="css/animate.css" rel="stylesheet"> 
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet"> 
+	<title>HIMU - OnePage HTML Parallax template</title>
+	 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/prettyPhoto.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/animate.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/responsive.css') }}">
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
 	<link rel="shortcut icon" href="images/ico/favicon.png"> 
@@ -69,31 +69,24 @@
 				<li data-target="#main-carousel" data-slide-to="2"></li>
 			</ol><!--/.carousel-indicators--> 
 			<div class="carousel-inner">
-				<div class="item active" style="background-image: url(images/slider/slide3.jpg)"> 
-					<div class="carousel-caption"> 
-						<div> 
-							<h2 class="heading animated bounceInDown">'Himu' Onepage HTML Template</h2> 
-							<p class="animated bounceInUp">Fully Professional one page template</p> 
-							<a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
-						</div> 
-					</div> 
+				{% for res in results %}
+				{{ loop.index }}
+
+				{% if loop.index == 1 %}
+				<div class="item active" style="background-image: url({{ res.image_url}})">
+					{% else %}
+				<div class="item" style="background-image: url({{ res.image_url}})">
+					{% endif %}
+					<div class="carousel-caption">
+						<div>
+							<h2 class="heading animated bounceInDown">{{ res.catchy_title}}</h2>
+							<p class="animated bounceInUp">{{ res.sub_title}}</p>
+							<a class="btn btn-default slider-btn animated fadeIn" href="#">Read More</a>
+						</div>
+					</div>
 				</div>
-				<div class="item" style="background-image: url(images/slider/slide2.jpg)"> 
-					<div class="carousel-caption"> <div> 
-						<h2 class="heading animated bounceInDown">Get All in Onepage</h2> 
-						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
-					</div> 
-				</div> 
-			</div> 
-			<div class="item" style="background-image: url(images/slider/slide1.jpg)"> 
-				<div class="carousel-caption"> 
-					<div> 
-						<h2 class="heading animated bounceInRight">Fully Responsive Template</h2> 
-						<p class="animated bounceInLeft">100% Responsive HTML template</p> 
-						<a class="btn btn-default slider-btn animated bounceInUp" href="#">Get Started</a> 
-					</div> 
-				</div> 
-			</div>
+				{% endfor %}
+
 		</div><!--/.carousel-inner-->
 
 		<a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
@@ -158,7 +151,9 @@
 						</div> <!-- End Skill Bar -->
 						<div class="skillbar clearfix" data-percent="85%">
 							<div class="skillbar-title"><span>UI Design</span></div>
-							<div class="skillbar-bar"></div>
+							<div class="skillbar-bar"></div>	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
 							<div class="skill-bar-percent">85%</div>
 						</div> <!-- End Skill Bar -->
 						<div class="skillbar clearfix " data-percent="70%">

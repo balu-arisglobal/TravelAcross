@@ -14,7 +14,7 @@ class TravelDetails:
             self.db = client[config["mongod_dbName"]]
 
         def saveTravelInfo(self, travelDetails):
-            self.db.users.insert(travelDetails)
+            self.db.travelDetails.insert(travelDetails)
 
         def getAllTravelDetails(self):
             allItems = self.db.products.find()
