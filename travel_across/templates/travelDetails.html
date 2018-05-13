@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Details</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/travelDetails.js') }}"></script>
+<body>
+
+Please enter your travel details
+
+<form id="travelDetailsForm" role="form" enctype=multipart/form-data>
+         <p id="errorMessage" style="color:white"></p>
+         <table>
+
+             <tr>
+                 <td>Your Destination:</td>
+                 <td><input type="text" name="place" id="place"></td>
+             </tr>
+
+             <tr>
+                 <td>Enter a catchy Title of your Place :</td>
+                 <td><input type="text" name="catchy_title" id="catchy_title"></td>
+             </tr>
+
+             <tr>
+                 <td>Short Description like a sub title ?:</td>
+                 <td><input type="text" name="sub_title" id="sub_title"></td>
+             </tr>
+
+             <tr>
+                 <td>Travel Start Date:</td>
+                 <td><input type="date" name="start_date" id="start_date"></td>
+             </tr>
+
+             <tr>
+                 <td>Travel End Date:</td>
+                 <td><input type="date" name="end_date" id="end_date"></td>
+             </tr>
+
+              <tr>
+                 <td>Upload the images:</td>
+                 <td><input type="file" name="image1" id="image1" multiple></td>
+             </tr>
+
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="saveTravelDetailsBtn">Save Details </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</form>
+
+
+
+
+</body>
+</html>
