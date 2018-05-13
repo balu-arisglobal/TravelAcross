@@ -10,4 +10,4 @@ td= TravelDetails()
 
 @app.route('/')
 def home():
-   return render_template('travelDetails.html')
+   return render_template('travel_details.html')

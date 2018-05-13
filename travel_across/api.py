@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 from travel_across import app
 from travel_across import ALLOWED_EXTENSIONS
 import json
-from models.travelDetails import  TravelDetails
+from travel_across.models.travelDetails import  TravelDetails
 from werkzeug.utils import secure_filename
 
 td = TravelDetails()
