@@ -24,7 +24,8 @@
     <div class="container" id="home_div">
         <section class="home_css">
             <h1>Home</h1>
-            {% for res in results %}                    Title  :: {{ res.catchy_title}} <br>
+            {% for res in results %}
+                    Title  :: {{ res.catchy_title}} <br>
                    sub Title :: {{ res.sub_title}} <br>
                <input type="button" id="readMoreBtn" value="Read More"> <br>
            {% endfor %}

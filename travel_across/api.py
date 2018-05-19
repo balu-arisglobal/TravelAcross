@@ -22,9 +22,9 @@ def save_travel_details():
         sub_title = request.form.get('sub_title',None)
         start_date = request.form.get('start_date', None)
         end_date = request.form.get('end_date', None)
-        if 'file' not in request.files:
+        if 'image1' not in request.files:
             return 'No file part'
-        file = request.files['file']
+        file = request.files['image1']
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':
@@ -36,7 +36,7 @@ def save_travel_details():
             t_details_object = {'place': place, 'catchy_title': catchy_title, 'sub_title': sub_title,'start_date': start_date,'end_date': end_date, 'image_url':image_url}
             td.saveTravelInfo(t_details_object)
             allDetails = td.getAllTravelDetails()
-            return render_template('travel_details.html', results=allDetails)
+            return render_template('index.html', results=allDetails)
 
 
 @app.route('/uploads/<filename>')

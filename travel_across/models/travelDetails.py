@@ -17,7 +17,7 @@ class TravelDetails:
             self.db.travelDetails.insert(travelDetails)
 
         def getAllTravelDetails(self):
-            allItems = self.db.products.find()
+            allItems = self.db.travelDetails.find()
             if allItems.count() > 0:
                 matches = []
                 for item in allItems:

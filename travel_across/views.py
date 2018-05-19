@@ -11,3 +11,4 @@ td= TravelDetails()
 def home():
    allDetails = td.getAllTravelDetails()
    return render_template('index.html', results=allDetails)
+   #return render_template('travel_details.html')
