@@ -25,3 +25,17 @@ class TravelDetails:
                 return matches
             else:
                 return ""
+
+        def saveTeamInfo(self, team_user_info):
+            self.db.teamUsers.insert(team_user_info)
+
+
+        def getTeamUsersInfo(self):
+            team = self.db.teamUsers.find()
+            if team.count() > 0:
+                team_user = []
+                for item in team:
+                    team_user.append(item)
+                return team_user
+            else:
+                return ""

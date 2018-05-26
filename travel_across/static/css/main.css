@@ -73,6 +73,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 }
 
+
+#btnUserSubmit{
+
+background: #fc7700;
+
+color: white;
+
+height: 25px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+border-style: none;
+}
+
+
+
 .slider-btn {
 	background-color:#fc7700;
 	color: #FFF;

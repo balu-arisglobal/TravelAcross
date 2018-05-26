@@ -9,6 +9,7 @@ td= TravelDetails()
 
 @app.route('/')
 def home():
-   allDetails = td.getAllTravelDetails()
-   return render_template('index.html', results=allDetails)
+   blog_details = td.getAllTravelDetails()
+   team_user_details = td.getTeamUsersInfo()
+   return render_template('index.html', results=blog_details, team_info=team_user_details)
    #return render_template('travel_details.html')
