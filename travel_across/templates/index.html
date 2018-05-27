@@ -150,20 +150,20 @@
 						<div class="row item active">
 
 
-							{% for res in team_info %}
+							{% for info in team_info %}
 
 
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
-									<img src="url({{ res.image_url}})" alt="team member" />
-									<h4>{{ res.team_user_name}}</h4>
-									<h5>{{ res.team_designation}}</h5>
-									<p>{{ res.team_user_about}}</p>
+									<img src="{{ info.team_user_picture}}" alt="team member" />
+									<h4>{{ info.team_user_name}}</h4>
+									<h5>{{ info.team_designation}}</h5>
+									<p>{{ info.team_user_about}}</p>
 									<div class="socials">
-										<a href="{{res.team_user_fb }}"><i class="fa fa-facebook"></i></a>
-										<a href="{{res.team_user_gplus}}"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="{{res.team_user_linkedin}}"><i class="fa fa-linkedin"></i></a>
+										<a href="{{info.team_user_fb }}" target="_blank"><i class="fa fa-facebook"></i></a>
+										<a href="{{info.team_user_gplus}}" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<a href="{{info.team_user_instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
+										<a href="{{info.team_user_linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
@@ -177,21 +177,19 @@
 
 
 
-				{% for res in team_info %}
+				{% for info in team_info %}
 
 
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
-									<img src="url({{ res.image_url}})" alt="team member" />
-									<h4>{{ res.team_user_name}}</h4>
-									<h5>{{ res.team_designation}}</h5>
-									<p>{{ res.team_user_about}}</p>
+									<img src="{{ info.team_user_picture}}" alt="team member" />
+									<h4>{{ info.team_user_name}}</h4>
+									<h5>{{ info.team_designation}}</h5>
+									<p>{{ info.team_user_about}}</p>
 									<div class="socials">
-										<a href="{{res.team_user_fb }}"><i class="fa fa-facebook"></i></a>
-										<a href="{{res.team_user_gplus}}"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-instagram"></i></a>
-										<a href="{{res.team_user_linkedin}}"><i class="fa fa-linkedin"></i></a>
-									</div>
+										<a href="{{info.team_user_fb }}" target="_blank"><i class="fa fa-facebook"></i></a>
+										<a href="{{info.team_user_gplus}}" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<a href="{{info.team_user_instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>
 

@@ -73,16 +73,21 @@ def save_team_info():
 
 
 
-@app.route('/travelDetails/getTeamUserInf0', methods=['POST'])
-def get_team_user_info():
-     return td.getTeamUsersInfo()
-
-
-
 @app.route('/travelDetails/save-user', methods=['POST'])
 def save_user():
     if request.method == 'POST':
         pass
 
 
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],filename)
 
+@app.route('/teamUser/<filename>')
+def team_user_file(filename):
+    return send_from_directory(app.config['TEAM_IMAGES_FOLDER'],filename)
+
+
+@app.route('/travelDetails/getTeamUserInf0', methods=['POST'])
+def get_team_user_info():
+     return td.getTeamUsersInfo()
