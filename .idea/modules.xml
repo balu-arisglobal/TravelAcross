@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TravelAcross.iml" filepath="$PROJECT_DIR$/.idea/TravelAcross.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Alexa Projects/reddit reader/.idea/reddit reader.iml" filepath="$PROJECT_DIR$/../Alexa Projects/reddit reader/.idea/reddit reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../smple_project/.idea/smple_project.iml" filepath="$PROJECT_DIR$/../smple_project/.idea/smple_project.iml" />
     </modules>
   </component>
 </project>
